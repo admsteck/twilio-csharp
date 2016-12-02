@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 #endif
 
+using System.Net;
 using Twilio.Http;
 
 namespace Twilio.Clients
@@ -64,8 +65,12 @@ namespace Twilio.Clients
 	    /// <returns>response of the request</returns>
 		public Response Request(Request request) {
 			request.SetAuth(_username, _password);
-			return HttpClient.MakeRequest(request);
+			return HttpClient.MakeRequest(request, Proxy);
 		}
+
+        public IWebProxy Proxy { get; set; }
 	}
+
+
 }
 

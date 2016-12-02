@@ -1,4 +1,5 @@
 using System;
+using System.Net;
 
 namespace Twilio.Http
 {
@@ -13,7 +14,7 @@ namespace Twilio.Http
         ///
         /// <param name="request">request to make</param>
         /// <returns>response of the request</returns>
-        public abstract Response MakeRequest(Request request);
+        public abstract Response MakeRequest(Request request, IWebProxy proxy);
 
         /// <summary>
         /// Set the authentication string for the request
