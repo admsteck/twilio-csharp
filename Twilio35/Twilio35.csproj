@@ -14,7 +14,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
+    <DefineConstants>DEBUG;__MonoCS__</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
@@ -26,6 +26,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
+    <DefineConstants>__MonoCS__</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="..\Twilio\Base\Creator.cs"><Link>Base\Creator.cs</Link></Compile>
